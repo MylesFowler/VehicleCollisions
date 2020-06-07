@@ -4,9 +4,10 @@ import time
 import datetime as dt
 import seaborn as sns
 import matplotlib.pyplot as plt
+import sys
 
-
-df = pd.read_csv('/Users/Mike_F/Desktop/US_Accidents_Dec19.csv')
+input_file = sys.argv[1]
+df = pd.read_csv(input_file)
 
 df.drop(['TMC','Description','Country','Timezone','Airport_Code','Number','Weather_Timestamp','Traffic_Calming','Traffic_Signal','Turning_Loop','Amenity','Bump','Crossing','Give_Way','Junction','No_Exit','Railway','Roundabout','Station','Stop','ID','Wind_Speed(mph)','Precipitation(in)','Visibility(mi)','Wind_Chill(F)','End_Lat','End_Lng'], axis = 1, inplace = True)
 
