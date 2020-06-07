@@ -4,8 +4,10 @@ import time
 import datetime as dt
 import seaborn as sns
 import matplotlib.pyplot as plt
+importy sys
 
-df = pd.read_csv('/Users/Mike_F/Desktop/2020-05-20.csv')
+input_file = sys.argv[1]
+df = pd.read_csv(input_file)
 
 df['Side'].replace('R',1, inplace=True)
 df['Side'].replace('L',0, inplace=True)
